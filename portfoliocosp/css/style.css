@@ -1,0 +1,360 @@
+/* Reset básico e fonte */
+body {
+    margin: 0;
+    font-family: 'Helvetica Neue', sans-serif;
+    background-color: #111;
+    color: white;
+
+    /* Espaço para navbar fixa */
+    padding-top: 80px;
+    /* Deve ser igual à altura da navbar */
+}
+
+body,
+html {
+
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-color: #121212;
+    color: #ddd;
+}
+
+.carousel-container {
+    position: relative;
+    /* necessário para o .carousel-dots se posicionar relativamente a este */
+    max-width: auto;
+    max-height: 700px;
+    margin: auto;
+    overflow: hidden;
+
+}
+
+.carousel-slide img {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    pointer-events: none;
+    /* evita clique em imagens invisíveis */
+}
+
+.carousel-slide img.active {
+    opacity: 1;
+    pointer-events: auto;
+    position: relative;
+    /* mantém a imagem visível no fluxo */
+}
+
+.carousel-slide img:first-child {
+    display: block;
+}
+
+.carousel-dots {
+    text-align: center;
+    padding: 20px 0;
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    z-index: 10;
+}
+
+@keyframes ringExpand {
+    0% {
+        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.5);
+    }
+
+    100% {
+        box-shadow: 0 0 0 10px rgba(255, 255, 255, 0);
+    }
+}
+
+.dot {
+    height: 14px;
+    width: 14px;
+    margin: 0 6px;
+    background-color: transparent;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.dot:hover {
+    background-color: #fff;
+}
+
+.dot.active {
+    background-color: #fff;
+    animation: ringExpand 1.2s ease-out infinite;
+}
+
+.navbar {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+    background: rgba(0, 0, 0, .5);
+    /* totalmente transparente */
+    z-index: 1000;
+}
+
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 70%;
+}
+
+.nav-left a,
+.nav-right a {
+    color: #ddd;
+    text-decoration: none;
+    margin: 0 20px;
+    font-size: 18px;
+    position: relative;
+}
+
+.nav-left a:hover,
+.nav-right a:hover {
+    color: #fff;
+}
+
+.logo img {
+    width: 500px;
+    height: auto;
+}
+
+.nav-left,
+.nav-right {
+    display: flex;
+    gap: 30px;
+}
+
+/* Hover Underline Effect */
+.nav-left a::before,
+.nav-right a::before {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #ff0000;
+    /* vermelho */
+    transition: width 0.3s;
+}
+
+.nav-left a:hover::before,
+.nav-right a:hover::before {
+    width: 100%;
+}
+
+.text-box {
+    background-color: #222;
+    padding: 20px;
+    margin: 30px auto;
+    max-width: 600px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+/* Header Text */
+.header-text {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Minor Text */
+.minor-text {
+    font-size: 1rem;
+    color: #bbb;
+}
+
+/* Footer */
+footer {
+    background-color: #000000;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo img {
+    max-width: 150px;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    height: auto;
+}
+
+.social-media {
+    display: flex;
+    justify-content: space-between;
+}
+
+.social-icon {
+    text-decoration: none;
+    color: #fff;
+    background-color: #333;
+    padding: 15px;
+    width: 60px;
+    /* Square blocks */
+    height: 60px;
+    /* Square blocks */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    text-align: center;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.social-text {
+    font-size: 1rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    margin: 0;
+}
+
+.social-icons-wrapper {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icon:hover {
+    background-color: #555;
+}
+
+.footer-content {
+    display: flex;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 40px;
+    gap: 40px;
+}
+
+.logo img {
+    max-width: 150px;
+    height: auto;
+}
+
+.social-media {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    /* Espaço entre texto e ícones */
+    color: #ddd;
+}
+
+.footer-text {
+    color: #bbb;
+    font-size: 1.1rem;
+    margin-bottom: 12px;
+    font-family: 'Georgia', serif;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-icon {
+    color: #fff;
+    /* Ícone branco */
+    background-color: transparent;
+    /* Fundo igual ao footer (escuro) */
+    padding: 15px;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    border: 2px solid #fff;
+    /* Borda branca quadrada */
+    border-radius: 0;
+    /* Sem arredondamento */
+    transition: background-color 0.3s, color 0.3s;
+    text-decoration: none;
+    box-sizing: border-box;
+    /* Para contar o padding dentro do tamanho */
+}
+
+.social-icon:hover {
+    background-color: #fff;
+    /* Fundo branco ao passar o rato */
+    color: #121212;
+    /* Ícone escuro no hover */
+    border-color: #fff;
+    /* Mantém a borda branca */
+}
+
+/* Secção com 3 caixas de projetos */
+.info-section {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 30px;
+    margin: 60px auto;
+    max-width: 1200px;
+    flex-wrap: wrap;
+    padding: 0 20px;
+}
+
+.info-box {
+    background-color: #1e1e1e;
+    border: 2px solid #333;
+    border-radius: 10px;
+    flex: 1 1 300px;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.info-box:hover {
+    transform: translateY(-8px);
+    border-color: #ff0000;
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.2);
+}
+
+.info-box img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.info-box h3 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.info-box p {
+    color: #bbb;
+    font-size: 1rem;
+    line-height: 1.5;
+}

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Miguel Teixeira | Ortographic Maze</title>
+    <link rel="icon" type="image/x-icon" href="/image/favicon.png">
+    <link rel="stylesheet" href="css/gamePage.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-left">
+                <a href="about.html">Sobre Mim</a>
+                <a href="games.html">Jogos</a>
+            </div>
+
+            <div class="logo">
+                <a href="index.html">
+                    <img src="image/icon.png" alt="Logo">
+                </a>
+            </div>
+
+            <div class="nav-right">
+                <a href="modelacao.html">3D</a>
+                <a href="contact.html">Contacto</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Banner -->
+    <div class="hero">
+        <div class="hero-overlay"></div>
+    </div>
+
+    <!-- About Content -->
+    <main>
+        <section class="about-section">
+            <div class="about-text">
+                <h2>Sanc<span>tuary</span></h2>
+                <p>Projeto Final da cadeira de programação 1 na ESMAD</p>
+            </div>
+            <!-- Carrousel -->
+            <section class="carousel-section">
+                <div class="carousel-container">
+                    <div class="carousel-slide">
+                        <img src="image/sanc1.png" alt="Slide 1">
+                        <img src="image/sanc2.png" alt="Slide 2">
+                        <img src="image/sanc3.png" alt="Slide 3">
+                        <img src="image/sanc4.png" alt="Slide 3">
+                    </div>
+                    <div class="carousel-dots">
+                        <span class="dot" onclick="currentSlide(0)"></span>
+                        <span class="dot" onclick="currentSlide(1)"></span>
+                        <span class="dot" onclick="currentSlide(2)"></span>
+                        <span class="dot" onclick="currentSlide(3)"></span>
+                    </div>
+                </div>
+            </section>
+    </main>
+    <!-- Video Section -->
+    <div class="video-section-wrapper">
+        <section class="video-section">
+            <div class="video-container">
+                <h2>Vídeo <span>Demonstrativo</span></h2>
+                <div class="video-wrapper">
+                    <iframe width="100%" height="500"
+                        src="https://www.youtube.com/embed/JDsICA8aICI?si=o_ju8L0M79R0do86" 
+                        title="Sanctuary" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+
+                <div class="game-download">
+                    <a href="path/do/jogo.zip" download>
+                        <button>Download do Jogo</button>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </div>
+
+
+
+    <script src="js/script.js"></script>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="logo">
+                <img src="image/icon.png" alt="Logo" />
+            </div>
+            <div class="social-media">
+                <p class="social-text">Fica a par das minhas redes sociais!</p>
+                <div class="social-icons-wrapper">
+                    <a href="https://www.instagram.com/michaelson.nef/" class="social-icon" target="_blank"
+                        rel="noopener noreferrer">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/miguel-teixeira-1a1810223" class="social-icon" target="_blank"
+                        rel="noopener noreferrer">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
