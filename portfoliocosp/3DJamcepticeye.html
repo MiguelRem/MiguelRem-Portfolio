@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Miguel Teixeira | Ortographic Maze</title>
+    <link rel="icon" type="image/x-icon" href="/image/favicon.png">
+    <link rel="stylesheet" href="css/3dPage.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-left">
+                <a href="about.html">Sobre Mim</a>
+                <a href="games.html">Jogos</a>
+            </div>
+
+            <div class="logo">
+                <a href="index.html">
+                    <img src="image/icon.png" alt="Logo">
+                </a>
+            </div>
+
+            <div class="nav-right">
+                <a href="modelacao.html">3D</a>
+                <a href="contact.html">Contacto</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Banner -->
+    <div class="hero">
+        <div class="hero-overlay"></div>
+    </div>
+
+    <main>
+        <!-- Sanctuary Section -->
+        <section class="about-section">
+            <div class="about-text">
+                <h2>Sanc<span>tuary</span></h2>
+                <p>Projeto Final da cadeira de programação 1 na ESMAD</p>
+            </div>
+
+            <!-- Carrossel -->
+            <section class="carousel-section">
+                <div class="carousel-container">
+                    <div class="carousel-slide">
+                        <img src="image/sanc1.png" alt="Slide 1">
+                        <img src="image/sanc2.png" alt="Slide 2">
+                        <img src="image/sanc3.png" alt="Slide 3">
+                        <img src="image/sanc4.png" alt="Slide 4">
+                    </div>
+                    <div class="carousel-dots">
+                        <span class="dot" onclick="currentSlide(0, 0)"></span>
+                        <span class="dot" onclick="currentSlide(1, 0)"></span>
+                        <span class="dot" onclick="currentSlide(2, 0)"></span>
+                        <span class="dot" onclick="currentSlide(3, 0)"></span>
+                    </div>
+                </div>
+            </section>
+        </section>
+
+        <!-- Concept Section -->
+        <section class="about-section concept-section">
+            <!-- Carrossel -->
+            <section class="carousel-section">
+                <div class="carousel-container">
+                    <div class="carousel-slide">
+                        <img src="image/sanc1.png" alt="Concept 1">
+                        <img src="image/sanc1.png" alt="Concept 2">
+                        <img src="image/sanc1.png" alt="Concept 3">
+                    </div>
+                    <div class="carousel-dots">
+                        <span class="dot" onclick="currentSlide(0, 1)"></span>
+                        <span class="dot" onclick="currentSlide(1, 1)"></span>
+                        <span class="dot" onclick="currentSlide(2, 1)"></span>
+                    </div>
+                </div>
+            </section>
+
+            <div class="about-text right-align">
+                <h2>Con<span>cept</span></h2>
+                <p>Imagens de referência, ideias iniciais e processo criativo usado no desenvolvimento do modelo.</p>
+            </div>
+        </section>
+
+        <!-- UV Section -->
+        <section class="about-section uv-section">
+            <div class="about-text left-align">
+                <h2>U<span>V</span></h2>
+                <p>Mapeamento UV utilizado para texturização do modelo 3D.</p>
+            </div>
+
+            <!-- Carrossel -->
+            <section class="carousel-section">
+                <div class="carousel-container">
+                    <div class="carousel-slide">
+                        <img src="image/sanc1.png" alt="UV 1">
+                        <img src="image/sanc1.png" alt="UV 2">
+                        <img src="image/sanc1.png" alt="UV 3">
+                    </div>
+                    <div class="carousel-dots">
+                        <span class="dot" onclick="currentSlide(0, 2)"></span>
+                        <span class="dot" onclick="currentSlide(1, 2)"></span>
+                        <span class="dot" onclick="currentSlide(2, 2)"></span>
+                    </div>
+                </div>
+            </section>
+        </section>
+    </main>
+
+
+    <script src="js/script.js"></script>
+    <script>
+        document.querySelectorAll('.carousel-slide img').forEach(img => {
+            img.addEventListener('click', (e) => {
+                e.preventDefault(); // impede o link de abrir
+                openImageModal(img.src);
+            });
+        });
+
+        function openImageModal(src) {
+            const modal = document.createElement('div');
+            modal.classList.add('image-modal');
+            modal.innerHTML = `<img src="${src}" alt="expanded">`;
+
+            document.body.appendChild(modal);
+
+            // ativa o fade-in
+            setTimeout(() => modal.classList.add('active'), 10);
+
+            // fecha ao clicar fora da imagem ou na própria imagem
+            modal.addEventListener('click', () => {
+                modal.classList.remove('active');
+                setTimeout(() => modal.remove(), 300);
+            });
+        }
+    </script>
+
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="logo">
+                <img src="image/icon.png" alt="Logo" />
+            </div>
+            <div class="social-media">
+                <p class="social-text">Fica a par das minhas redes sociais!</p>
+                <div class="social-icons-wrapper">
+                    <a href="https://www.instagram.com/michaelson.nef/" class="social-icon" target="_blank"
+                        rel="noopener noreferrer">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/miguel-teixeira-1a1810223" class="social-icon" target="_blank"
+                        rel="noopener noreferrer">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
