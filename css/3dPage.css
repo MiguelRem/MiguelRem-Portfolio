@@ -1,10 +1,12 @@
-/* Reset e base */
+/* ===========================
+   RESET & BASE
+=========================== */
 body {
     margin: 0;
     font-family: 'Helvetica Neue', sans-serif;
     background-color: #111;
     color: #fff;
-    padding-top: 80px;
+    padding-top: 80px; /* Espaço para navbar fixa */
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -17,7 +19,9 @@ main {
     align-items: center;
 }
 
-/* Navbar */
+/* ===========================
+   NAVBAR
+=========================== */
 .navbar {
     position: absolute;
     top: 0;
@@ -37,6 +41,12 @@ main {
     align-items: center;
 }
 
+.nav-left,
+.nav-right {
+    display: flex;
+    gap: 30px;
+}
+
 .nav-left a,
 .nav-right a {
     color: #ddd;
@@ -51,10 +61,7 @@ main {
     color: #fff;
 }
 
-.logo img {
-    max-width: 150px;
-}
-
+/* Hover underline effect */
 .nav-left a::before,
 .nav-right a::before {
     content: '';
@@ -72,7 +79,14 @@ main {
     width: 100%;
 }
 
-/* Hero */
+/* Logo */
+.logo img {
+    max-width: 150px;
+}
+
+/* ===========================
+   HERO
+=========================== */
 .hero {
     width: 100%;
     height: 200px;
@@ -86,11 +100,13 @@ main {
     background: rgba(0, 0, 0, 0.3);
 }
 
-/* Carrossel */
+/* ===========================
+   CARROSSEL
+=========================== */
 .carousel-container {
     position: relative;
-    width: 600px;         /* largura fixa (ou podes usar 100%) */
-    height: 400px;        /* altura fixa */
+    width: 600px;  /* ou 100% se quiseres responsivo */
+    height: 400px;
     overflow: hidden;
     border-radius: 8px;
 }
@@ -98,13 +114,13 @@ main {
 .carousel-slide img {
     width: 100%;
     height: 100%;
-    object-fit: cover;     /* mantém a proporção da imagem */
+    object-fit: cover;
     opacity: 0;
     transition: opacity 1s ease-in-out;
     position: absolute;
     top: 0;
     left: 0;
-        pointer-events: none;
+    pointer-events: none;
 }
 
 .carousel-slide img.active {
@@ -112,7 +128,6 @@ main {
     position: absolute;
     pointer-events: auto;
 }
-
 
 .carousel-dots {
     text-align: center;
@@ -137,7 +152,9 @@ main {
     background: #fff;
 }
 
-/* About Section */
+/* ===========================
+   ABOUT SECTION
+=========================== */
 .about-section {
     display: flex;
     align-items: center;
@@ -168,7 +185,7 @@ main {
     color: #ddd;
 }
 
-/* Alinhamentos personalizados */
+/* Text alignment helpers */
 .right-align {
     text-align: right;
 }
@@ -177,37 +194,121 @@ main {
     text-align: left;
 }
 
-/* Footer */
+/* ------------------------------------------------------
+   FOOTER
+------------------------------------------------------ */
 footer {
     background-color: #000;
     padding: 20px;
     text-align: center;
-    margin-top: auto;
 }
 
 .footer-content {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    text-align: left;
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px 40px;
+    gap: 40px;
+}
+
+/* Logo */
+.logo img {
+    max-width: 150px;
+    height: auto;
+    margin-right: 20px;
+}
+
+/* Redes sociais */
+.social-media {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    color: #ddd;
+}
+
+.social-text {
+    font-size: 1rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    margin: 0;
+}
+
+.social-icons-wrapper {
+    display: flex;
+    gap: 15px;
 }
 
 .social-icon {
     color: #fff;
+    background-color: transparent;
+    padding: 15px;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
     border: 2px solid #fff;
-    padding: 10px;
-    margin: 0 5px;
-    transition: all 0.3s;
+    border-radius: 0;
+    transition: background-color 0.3s, color 0.3s;
+    text-decoration: none;
+    box-sizing: border-box;
 }
 
 .social-icon:hover {
-    background: #fff;
-    color: #000;
+    background-color: #fff;
+    color: #121212;
+    border-color: #fff;
 }
 
-/* --- IMAGEM EXPANDIDA --- */
+/* Contactos */
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+    color: #ddd;
+    font-size: 1rem;
+    line-height: 0.5;
+}
+
+.contact-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.contact-info a {
+    color: #ff0000; /* vermelho padrão */
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+.contact-info a:hover {
+    color: #ffffff; /* branco */
+    text-decoration: underline;
+}
+
+.contact-info a:visited,
+.contact-info a:active,
+.contact-info a:focus {
+    color: #ff0000;
+    text-decoration: none;
+}
+
+/* ===========================
+   IMAGEM EXPANDIDA (MODAL)
+=========================== */
 .image-modal {
     position: fixed;
     inset: 0;

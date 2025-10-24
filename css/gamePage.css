@@ -1,34 +1,31 @@
-/* Reset básico e fonte */
-body {
-    margin: 0;
-    font-family: 'Helvetica Neue', sans-serif;
-    background-color: #111111;
-    color: white;
-    padding-top: 80px;
-    /* Espaço para navbar fixa */
-}
-
-html,
-body {
+/* =========================================================
+   RESET BÁSICO E ESTRUTURA GERAL
+========================================================= */
+html, body {
     height: 100%;
     margin: 0;
     display: flex;
     flex-direction: column;
 }
 
-main {
-    flex: 1;
-    /* ocupa espaço entre navbar e footer */
-    display: flex;
-    justify-content: center;
-    /* centraliza horizontalmente */
-    align-items: center;
-    /* centraliza verticalmente */
-    flex-direction: column;
-    /* empilha elementos se houver mais de um */
+body {
+    font-family: 'Helvetica Neue', sans-serif;
+    background-color: #111111;
+    color: white;
+    padding-top: 80px; /* Espaço para navbar fixa */
 }
 
-/* Navbar - Navbar - Navbar - Navbar - Navbar - Navbar - Navbar - Navbar - Navbar - Navbar - Navbar - Navbar - Navbar - Navbar - Navbar - Navbar - Navbar - Navbar - */
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center; /* centraliza horizontalmente */
+    align-items: center;     /* centraliza verticalmente */
+    flex-direction: column;
+}
+
+/* =========================================================
+   NAVBAR
+========================================================= */
 .navbar {
     position: absolute;
     top: 0;
@@ -48,6 +45,12 @@ main {
     width: 70%;
 }
 
+.nav-left,
+.nav-right {
+    display: flex;
+    gap: 30px;
+}
+
 .nav-left a,
 .nav-right a {
     color: #ddd;
@@ -55,6 +58,7 @@ main {
     margin: 0 20px;
     font-size: 18px;
     position: relative;
+    transition: color 0.3s;
 }
 
 .nav-left a:hover,
@@ -62,18 +66,7 @@ main {
     color: #fff;
 }
 
-.logo img {
-    max-width: 150px;
-    height: auto;
-}
-
-.nav-left,
-.nav-right {
-    display: flex;
-    gap: 30px;
-}
-
-/* Hover Underline Effect */
+/* Hover underline effect */
 .nav-left a::before,
 .nav-right a::before {
     content: '';
@@ -91,14 +84,21 @@ main {
     width: 100%;
 }
 
-/* Hero Banner */
+/* Logo */
+.logo img {
+    max-width: 150px;
+    height: auto;
+}
+
+/* =========================================================
+   HERO / CAROUSEL
+========================================================= */
 .carousel-container {
     position: relative;
     max-width: 700px;
     max-height: 700px;
     margin: auto;
     overflow: hidden;
-
 }
 
 .carousel-slide img {
@@ -121,12 +121,13 @@ main {
     display: block;
 }
 
+/* Dots */
 .carousel-dots {
-    text-align: center;
-    padding: 20px 0;
     position: absolute;
     bottom: 20px;
     width: 100%;
+    text-align: center;
+    padding: 20px 0;
     z-index: 10;
 }
 
@@ -134,7 +135,6 @@ main {
     0% {
         box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.5);
     }
-
     100% {
         box-shadow: 0 0 0 10px rgba(255, 255, 255, 0);
     }
@@ -161,8 +161,9 @@ main {
     animation: ringExpand 1.2s ease-out infinite;
 }
 
-
-/* About Section - About Section - About Section - About Section - About Section - About Section - About Section - About Section - About Section - About Section -  */
+/* =========================================================
+   ABOUT SECTION
+========================================================= */
 .about-section {
     max-width: 1200px;
     margin: 50px auto;
@@ -197,36 +198,99 @@ main {
         flex-direction: column;
         text-align: center;
     }
-
     .about-image {
         order: -1;
     }
 }
 
-/* Footer - Footer - Footer - Footer - Footer - Footer - Footer - Footer - Footer - Footer - Footer - Footer - Footer - Footer - Footer - Footer -  */
+/* =========================================================
+   VIDEO SECTION
+========================================================= */
+.video-section-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 80px);
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.video-section {
+    width: 80%;
+    max-width: 1000px;
+    text-align: center;
+}
+
+.video-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #fff;
+}
+
+.video-section h2 span {
+    color: #ff0000;
+}
+
+.video-wrapper iframe {
+    width: 100%;
+    max-width: 800px;
+    border-radius: 12px;
+    box-shadow: 0 0 25px rgba(255, 0, 0, 0.3);
+}
+
+/* =========================================================
+   DOWNLOAD BUTTON
+========================================================= */
+.game-download {
+    margin-top: 100px;
+}
+
+.game-download button {
+    background-color: #ff0000;
+    color: #fff;
+    border: none;
+    padding: 12px 25px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.game-download button:hover {
+    background-color: #e60000;
+    transform: scale(1.05);
+}
+
+/* ------------------------------------------------------
+   FOOTER
+------------------------------------------------------ */
 footer {
     background-color: #000;
     padding: 20px;
     text-align: center;
-    margin-top: auto;
 }
 
 .footer-content {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    text-align: left;
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px 40px;
     gap: 40px;
 }
 
-.footer-content .logo img {
+/* Logo */
+.logo img {
     max-width: 150px;
     height: auto;
-    margin-bottom: 10px;
+    margin-right: 20px;
 }
 
+/* Redes sociais */
 .social-media {
     display: flex;
     flex-direction: column;
@@ -271,82 +335,41 @@ footer {
     border-color: #fff;
 }
 
-/* hero */
-
-.hero {
-    width: 100%;
-    background: center/cover no-repeat;
+/* Contactos */
+.contact-info {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    padding: 60px 20px;
-    /* Espaçamento interno em vez de height fixa */
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+    color: #ddd;
+    font-size: 1rem;
+    line-height: 0.5;
 }
 
-.hero-overlay {
-    position: absolute;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.3);
-}
-
-/* Video Section */
-.video-section {
-    width: 80%;
-    max-width: 1000px;
-    text-align: center;
-    margin: 0;
-    /* remove margem inferior para centrar exatamente */
-}
-
-.video-section-wrapper {
-    display: flex;
-    justify-content: center;
-    /* centraliza horizontal */
-    align-items: center;
-    /* centraliza vertical */
-    min-height: calc(100vh - 80px);
-    /* altura total menos navbar */
-    padding: 0 20px;
-    /* espaço interno opcional */
-    box-sizing: border-box;
-}
-
-/* iframe do vídeo */
-.video-wrapper iframe {
-    width: 100%;
-    max-width: 800px;
-    border-radius: 12px;
-    box-shadow: 0 0 25px rgba(255, 0, 0, 0.3);
-}
-
-.video-section h2 {
-    font-size: 2.5rem;
-    margin-bottom: 30px;
+.contact-title {
+    font-size: 1.2rem;
+    font-weight: 600;
     color: #fff;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
-.video-section h2 span {
+.contact-info a {
+    color: #ff0000; /* vermelho padrão */
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+.contact-info a:hover {
+    color: #ffffff; /* branco */
+    text-decoration: underline;
+}
+
+.contact-info a:visited,
+.contact-info a:active,
+.contact-info a:focus {
     color: #ff0000;
-}
-/* Download Button */
-.game-download {
-    margin-top: 100px;
-}
-
-.game-download button {
-    background-color: #ff0000;
-    color: #fff;
-    border: none;
-    padding: 12px 25px;
-    font-size: 1.1rem;
-    font-weight: bold;
-    cursor: pointer;
-    border-radius: 8px;
-    transition: background-color 0.3s, transform 0.2s;
-}
-
-.game-download button:hover {
-    background-color: #e60000;
-    transform: scale(1.05);
+    text-decoration: none;
 }

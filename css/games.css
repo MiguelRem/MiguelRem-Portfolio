@@ -1,24 +1,20 @@
-/* Reset básico e fonte */
+/* =========================
+   RESET E BASE
+========================= */
+html,
 body {
-    margin: 0;
-    font-family: 'Helvetica Neue', sans-serif;
-    background-color: #111;
-    color: white;
-
-    /* Espaço para navbar fixa */
-    padding-top: 80px;
-    /* Deve ser igual à altura da navbar */
-}
-
-body,
-html {
     margin: 0;
     padding: 0;
     height: 100%;
+    font-family: 'Helvetica Neue', sans-serif;
     background-color: #121212;
     color: #ddd;
+    padding-top: 80px; /* Espaço para navbar fixa */
 }
 
+/* =========================
+   NAVBAR
+========================= */
 .navbar {
     position: absolute;
     top: 0;
@@ -27,17 +23,21 @@ html {
     justify-content: center;
     align-items: center;
     padding: 20px 0;
-    background: rgba(0, 0, 0, .5);
-    /* totalmente transparente */
+    background: rgba(0, 0, 0, 0.5);
     z-index: 1000;
 }
-
 
 .nav-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 70%;
+}
+
+.nav-left,
+.nav-right {
+    display: flex;
+    gap: 30px;
 }
 
 .nav-left a,
@@ -47,6 +47,7 @@ html {
     margin: 0 20px;
     font-size: 18px;
     position: relative;
+    transition: color 0.3s;
 }
 
 .nav-left a:hover,
@@ -54,18 +55,7 @@ html {
     color: #fff;
 }
 
-.logo img {
-    width: 500px;
-    height: auto;
-}
-
-.nav-left,
-.nav-right {
-    display: flex;
-    gap: 30px;
-}
-
-/* Hover Underline Effect */
+/* Hover underline effect */
 .nav-left a::before,
 .nav-right a::before {
     content: '';
@@ -75,7 +65,6 @@ html {
     width: 0;
     height: 2px;
     background: #ff0000;
-    /* vermelho */
     transition: width 0.3s;
 }
 
@@ -84,14 +73,34 @@ html {
     width: 100%;
 }
 
-/* Logo da navbar */
+/* Logo */
 .logo img {
     max-width: 150px;
-    /* Ajustei para tamanho mais normal */
     height: auto;
 }
 
-/* Text box abaixo da navbar */
+/* =========================
+   HERO
+========================= */
+.hero {
+    width: 100%;
+    background: center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 60px 20px; /* Espaçamento interno */
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+/* =========================
+   TEXT BOX
+========================= */
 .text-box {
     background-color: #222;
     padding: 20px;
@@ -101,7 +110,6 @@ html {
     text-align: center;
 }
 
-/* Header e texto menor */
 .header-text {
     font-size: 2rem;
     font-weight: bold;
@@ -113,77 +121,9 @@ html {
     color: #bbb;
 }
 
-/* Footer */
-footer {
-    background-color: #000;
-    padding: 20px;
-    text-align: center;
-}
-
-.footer-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px 40px;
-    gap: 40px;
-}
-
-.footer-content .logo img {
-    max-width: 150px;
-    height: auto;
-    margin-bottom: 10px;
-}
-
-/* Social media */
-.social-media {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-    color: #ddd;
-}
-
-.social-text {
-    font-size: 1rem;
-    font-weight: 500;
-    text-transform: uppercase;
-    letter-spacing: 1.2px;
-    margin: 0;
-}
-
-/* Wrapper dos ícones sociais */
-.social-icons-wrapper {
-    display: flex;
-    gap: 15px;
-}
-
-/* Ícones sociais quadrados */
-.social-icon {
-    color: #fff;
-    background-color: transparent;
-    padding: 15px;
-    width: 60px;
-    height: 60px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.5rem;
-    border: 2px solid #fff;
-    border-radius: 0;
-    transition: background-color 0.3s, color 0.3s;
-    text-decoration: none;
-    box-sizing: border-box;
-}
-
-.social-icon:hover {
-    background-color: #fff;
-    color: #121212;
-    border-color: #fff;
-}
-
-/* Galeria de fotos */
+/* =========================
+   GALERIA DE FOTOS
+========================= */
 .photo-gallery {
     padding: 60px 5vw;
     background-color: #111;
@@ -210,14 +150,14 @@ footer {
     }
 }
 
-/* Itens da galeria - caixas quadradas */
+/* Itens da galeria */
 .gallery-item {
     position: relative;
     aspect-ratio: 1 / 1;
     overflow: hidden;
     border-radius: 12px;
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
     background-color: #111;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -232,16 +172,14 @@ footer {
     display: block;
 }
 
-/* Overlay full */
+/* Overlay */
 .overlay {
     position: absolute;
     inset: 0;
-    /* ocupa toda a imagem */
     display: flex;
     justify-content: center;
     align-items: center;
     background: rgba(0, 0, 0, 0.6);
-    /* escurece a imagem */
     color: #fff;
     font-size: 1.2rem;
     text-align: center;
@@ -249,7 +187,6 @@ footer {
     transition: opacity 0.4s ease;
     border-radius: 12px;
     pointer-events: none;
-    /* não bloqueia cliques */
 }
 
 /* Hover */
@@ -261,21 +198,114 @@ footer {
     opacity: 1;
 }
 
-/* hero */
-
-.hero {
-    width: 100%;
-    background: center/cover no-repeat;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    padding: 60px 20px;
-    /* Espaçamento interno em vez de height fixa */
+/* ------------------------------------------------------
+   FOOTER
+------------------------------------------------------ */
+footer {
+    background-color: #000;
+    padding: 20px;
+    text-align: center;
 }
 
-.hero-overlay {
-    position: absolute;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.3);
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    text-align: left;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 40px;
+    gap: 40px;
+}
+
+/* Logo */
+.logo img {
+    max-width: 150px;
+    height: auto;
+    margin-right: 20px;
+}
+
+/* Redes sociais */
+.social-media {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    color: #ddd;
+}
+
+.social-text {
+    font-size: 1rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    margin: 0;
+}
+
+.social-icons-wrapper {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icon {
+    color: #fff;
+    background-color: transparent;
+    padding: 15px;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    border: 2px solid #fff;
+    border-radius: 0;
+    transition: background-color 0.3s, color 0.3s;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+.social-icon:hover {
+    background-color: #fff;
+    color: #121212;
+    border-color: #fff;
+}
+
+/* Contactos */
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+    color: #ddd;
+    font-size: 1rem;
+    line-height: 0.5;
+}
+
+.contact-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.contact-info a {
+    color: #ff0000; /* vermelho padrão */
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+.contact-info a:hover {
+    color: #ffffff; /* branco */
+    text-decoration: underline;
+}
+
+.contact-info a:visited,
+.contact-info a:active,
+.contact-info a:focus {
+    color: #ff0000;
+    text-decoration: none;
 }

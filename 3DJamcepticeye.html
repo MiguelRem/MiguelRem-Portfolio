@@ -42,7 +42,9 @@
         <section class="about-section">
             <div class="about-text">
                 <h2>Death by a Thousand <span>Gears</span></h2>
-                <p>Projeto desenvolvido durante a Jamcepticeye onde estive encarregue pelo desenvolvimento de cenários e assets. Este é um projeto ainda em desenvolvimento em colaboração com a equipa da Fancy Crabs Studios.</p>
+                <p>Projeto desenvolvido durante a Jamcepticeye onde estive encarregue pelo desenvolvimento de cenários e
+                    assets. Este é um projeto ainda em desenvolvimento em colaboração com a equipa da Fancy Crabs
+                    Studios.</p>
             </div>
 
             <!-- Carrossel -->
@@ -94,7 +96,8 @@
         <section class="about-section uv-section">
             <div class="about-text left-align">
                 <h2>U<span>V</span></h2>
-                <p>Para simplicidade, utilizei neste projeto a paleta da "Imphenzia-PixPal" para colorir os materiais através de UVs e dar-lhes animações de cor.</p>
+                <p>Para simplicidade, utilizei neste projeto a paleta da "Imphenzia-PixPal" para colorir os materiais
+                    através de UVs e dar-lhes animações de cor.</p>
             </div>
 
             <!-- Carrossel -->
@@ -113,42 +116,45 @@
 
 
     <script src="js/script.js"></script>
-<script>
-    document.querySelectorAll('.carousel-container').forEach(container => {
-        const imgs = container.querySelectorAll('.carousel-slide img');
-        imgs.forEach(img => {
-            img.addEventListener('click', e => {
-                e.preventDefault();
-                openImageModal(img.src);
+    <script>
+        document.querySelectorAll('.carousel-container').forEach(container => {
+            const imgs = container.querySelectorAll('.carousel-slide img');
+            imgs.forEach(img => {
+                img.addEventListener('click', e => {
+                    e.preventDefault();
+                    openImageModal(img.src);
+                });
             });
         });
-    });
 
-    function openImageModal(src) {
-        const modal = document.createElement('div');
-        modal.classList.add('image-modal');
-        modal.innerHTML = `<img src="${src}" alt="expanded">`;
+        function openImageModal(src) {
+            const modal = document.createElement('div');
+            modal.classList.add('image-modal');
+            modal.innerHTML = `<img src="${src}" alt="expanded">`;
 
-        document.body.appendChild(modal);
+            document.body.appendChild(modal);
 
-        // fade-in
-        setTimeout(() => modal.classList.add('active'), 10);
+            // fade-in
+            setTimeout(() => modal.classList.add('active'), 10);
 
-        // fechar ao clicar
-        modal.addEventListener('click', () => {
-            modal.classList.remove('active');
-            setTimeout(() => modal.remove(), 300);
-        });
-    }
-</script>
+            // fechar ao clicar
+            modal.addEventListener('click', () => {
+                modal.classList.remove('active');
+                setTimeout(() => modal.remove(), 300);
+            });
+        }
+    </script>
 
 
     <!-- Footer -->
     <footer>
         <div class="footer-content">
+            <!-- Logo -->
             <div class="logo">
                 <img src="image/icon.png" alt="Logo" />
             </div>
+
+            <!-- Redes sociais -->
             <div class="social-media">
                 <p class="social-text">Fica a par das minhas redes sociais!</p>
                 <div class="social-icons-wrapper">
@@ -162,8 +168,17 @@
                     </a>
                 </div>
             </div>
+
+            <!-- Contactos -->
+            <div class="contact-info">
+                <p class="contact-title">Contactos</p>
+                <p>Email: <a href="mailto:miguelteixeiracontact@gmail.com">miguelteixeiracontact@gmail.com</a></p>
+                <p>Telefone: <a href="tel:+351939626121">+351 939 626 121</a></p>
+                <p>Localização: Porto, Portugal</p>
+            </div>
         </div>
     </footer>
+
 </body>
 
 </html>

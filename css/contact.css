@@ -1,27 +1,28 @@
-/* Reset básico e fonte */
-body {
-    margin: 0;
-    font-family: 'Helvetica Neue', sans-serif;
-    background-color: #111111;
-    color: white;
-    padding-top: 80px;
-    /* Espaço para navbar fixa */
-}
-
-html,
-body {
+/* =======================
+   BASE / RESET
+======================= */
+html, body {
     height: 100%;
     margin: 0;
     display: flex;
     flex-direction: column;
 }
 
-main {
-    flex: 1;
-    /* ocupa todo o espaço disponível entre navbar e footer */
+body {
+    margin: 0;
+    font-family: 'Helvetica Neue', sans-serif;
+    background-color: #111111;
+    color: white;
+    padding-top: 80px; /* Espaço para navbar fixa */
 }
 
-/* Navbar - Navbar - Navbar - Navbar - Navbar - Navbar - Navbar - Navbar - Navbar - Navbar - Navbar - Navbar - Navbar - Navbar - Navbar - Navbar - Navbar - Navbar - */
+main {
+    flex: 1; /* Ocupa o espaço entre navbar e footer */
+}
+
+/* =======================
+   NAVBAR
+======================= */
 .navbar {
     position: absolute;
     top: 0;
@@ -41,8 +42,12 @@ main {
     width: 70%;
 }
 
-.nav-left a,
-.nav-right a {
+.nav-left, .nav-right {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-left a, .nav-right a {
     color: #ddd;
     text-decoration: none;
     margin: 0 20px;
@@ -50,25 +55,12 @@ main {
     position: relative;
 }
 
-.nav-left a:hover,
-.nav-right a:hover {
+.nav-left a:hover, .nav-right a:hover {
     color: #fff;
 }
 
-.logo img {
-    max-width: 150px;
-    height: auto;
-}
-
-.nav-left,
-.nav-right {
-    display: flex;
-    gap: 30px;
-}
-
-/* Hover Underline Effect */
-.nav-left a::before,
-.nav-right a::before {
+/* Hover underline effect */
+.nav-left a::before, .nav-right a::before {
     content: '';
     position: absolute;
     bottom: -5px;
@@ -79,14 +71,25 @@ main {
     transition: width 0.3s;
 }
 
-.nav-left a:hover::before,
-.nav-right a:hover::before {
+.nav-left a:hover::before, .nav-right a:hover::before {
     width: 100%;
 }
 
-/* Footer */
+/* =======================
+   LOGO
+======================= */
+.logo img {
+    max-width: 150px;
+    height: auto;
+    margin-right: 20px;
+    margin-bottom: 10px;
+}
+
+/* ------------------------------------------------------
+   FOOTER
+------------------------------------------------------ */
 footer {
-    background-color: #000000;
+    background-color: #000;
     padding: 20px;
     text-align: center;
 }
@@ -94,39 +97,29 @@ footer {
 .footer-content {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    text-align: left;
     max-width: 1200px;
     margin: 0 auto;
+    padding: 20px 40px;
+    gap: 40px;
 }
 
+/* Logo */
 .logo img {
     max-width: 150px;
-    margin-right: 20px;
-    margin-bottom: 10px;
     height: auto;
+    margin-right: 20px;
 }
 
+/* Redes sociais */
 .social-media {
     display: flex;
-    justify-content: space-between;
-}
-
-.social-icon {
-    text-decoration: none;
-    color: #fff;
-    background-color: #333;
-    padding: 15px;
-    width: 60px;
-    /* Square blocks */
-    height: 60px;
-    /* Square blocks */
-    display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    font-size: 1.2rem;
-    text-align: center;
-    border-radius: 5px;
-    transition: background-color 0.3s;
+    gap: 10px;
+    color: #ddd;
 }
 
 .social-text {
@@ -142,51 +135,9 @@ footer {
     gap: 15px;
 }
 
-.social-icon:hover {
-    background-color: #555;
-}
-
-.footer-content {
-    display: flex;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px 40px;
-    gap: 40px;
-}
-
-.logo img {
-    max-width: 150px;
-    height: auto;
-}
-
-.social-media {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-    /* Espaço entre texto e ícones */
-    color: #ddd;
-}
-
-.footer-text {
-    color: #bbb;
-    font-size: 1.1rem;
-    margin-bottom: 12px;
-    font-family: 'Georgia', serif;
-}
-
-.social-icons {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-}
-
 .social-icon {
     color: #fff;
-    /* Ícone branco */
     background-color: transparent;
-    /* Fundo igual ao footer (escuro) */
     padding: 15px;
     width: 60px;
     height: 60px;
@@ -195,25 +146,61 @@ footer {
     align-items: center;
     font-size: 1.5rem;
     border: 2px solid #fff;
-    /* Borda branca quadrada */
     border-radius: 0;
-    /* Sem arredondamento */
     transition: background-color 0.3s, color 0.3s;
     text-decoration: none;
     box-sizing: border-box;
-    /* Para contar o padding dentro do tamanho */
 }
 
 .social-icon:hover {
     background-color: #fff;
-    /* Fundo branco ao passar o rato */
     color: #121212;
-    /* Ícone escuro no hover */
     border-color: #fff;
-    /* Mantém a borda branca */
 }
 
-/* Contact Section */
+/* Contactos */
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+    color: #ddd;
+    font-size: 1rem;
+    line-height: 0.5;
+}
+
+.contact-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.contact-info a {
+    color: #ff0000; /* vermelho padrão */
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+.contact-info a:hover {
+    color: #ffffff; /* branco */
+    text-decoration: underline;
+}
+
+.contact-info a:visited,
+.contact-info a:active,
+.contact-info a:focus {
+    color: #ff0000;
+    text-decoration: none;
+}
+
+
+/* =======================
+   CONTACT SECTION
+======================= */
 section {
     display: flex;
     justify-content: center;
@@ -224,7 +211,7 @@ section {
     gap: 60px;
 }
 
-/* Container do formulário */
+/* Container */
 .contact-container {
     flex: 1;
     display: flex;
@@ -233,7 +220,7 @@ section {
     padding: 20px 20px;
 }
 
-/* Formulário */
+/* Form */
 .contact-left {
     display: flex;
     flex-direction: column;
@@ -254,7 +241,7 @@ section {
     text-align: center;
 }
 
-/* Inputs e textarea */
+/* Inputs */
 .contact-inputs {
     font-family: 'Helvetica Neue', sans-serif;
     background: #111;
@@ -291,7 +278,7 @@ button:hover {
     transform: scale(1.03);
 }
 
-/* Lado direito com imagem */
+/* Contact image */
 .contact-right {
     flex: 1;
     display: flex;
@@ -318,8 +305,9 @@ button:hover {
     }
 }
 
-/* hero */
-
+/* =======================
+   HERO
+======================= */
 .hero {
     width: 100%;
     background: center/cover no-repeat;
@@ -327,8 +315,7 @@ button:hover {
     align-items: center;
     justify-content: center;
     position: relative;
-    padding: 60px 20px;
-    /* Espaçamento interno em vez de height fixa */
+    padding: 60px 20px; /* Espaçamento interno em vez de height fixa */
 }
 
 .hero-overlay {
