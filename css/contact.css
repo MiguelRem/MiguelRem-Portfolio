@@ -201,38 +201,48 @@ footer {
 /* =======================
    CONTACT SECTION
 ======================= */
-section {
+.contact-section {
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 80px 5vw;
-    background-color: #111;
     color: #fff;
-    gap: 60px;
+    background: url('../image/wallaper.jpg') center/cover no-repeat; /* Fundo */
+    background-attachment: fixed; /* opcional, dá um efeito de parallax leve */
 }
 
-/* Container */
+/* Sobreposição escura para legibilidade */
+.contact-section::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6); /* camada de sombra */
+    z-index: 0;
+}
+
+/* Formulário */
 .contact-container {
+    position: relative;
+    z-index: 1; /* garante que fica acima da sobreposição */
     flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 20px 20px;
+    padding: 20px;
 }
 
-/* Form */
 .contact-left {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    background: #1a1a1a;
+    background: rgba(26, 26, 26, 0.85);
     padding: 40px;
     border-radius: 12px;
     box-shadow: 0 0 20px rgba(255, 255, 255, 0.05);
     max-width: 600px;
     width: 100%;
 }
-
 /* Título */
 .contact-left-title h2 {
     font-size: 1.8rem;

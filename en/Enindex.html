@@ -5,10 +5,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="/image/favicon.png">
-    <title>Miguel Teixeira | Contacto</title>
-    <link rel="stylesheet" href="css/contact.css">
+    <title>Miguel Teixeira | Portfólio</title>
+    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 </head>
+
+<body>
+<section class="carousel-section">
+    <div class="carousel-container">
+        <div class="carousel-slide">
+            <a href="Jamcepticeye.html"><img src="image/Jamcepticeye_2.png" alt="Slide 1"></a>
+            <a href="3DJamcepticeye.html"><img src="image/Jamcepticeye_11.png" alt="Slide 2"></a>
+            <a href="Sanctuary.html"><img src="image/sanc3.png" alt="Slide 3"></a>
+        </div>
+        <div class="carousel-dots">
+            <span class="dot" onclick="currentSlide(0)"></span>
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+        </div>
+    </div>
+</section>
+
 
     <!-- Navbar -->
     <nav class="navbar">
@@ -31,26 +48,32 @@
         </div>
     </nav>
 
-<!-- Hero Banner -->
-<div class="hero">
-    <div class="hero-overlay"></div>
-</div>
+    <!-- altera isto -->
+    <section class="featured-section">
+        <h2 class="featured-header">Destaques</h2>
 
-<section class="contact-section">
-  <div class="contact-container">
-    <form action="https://api.web3forms.com/submit" method="POST" class="contact-left">
-      <div class="contact-left-title">
-        <h2>Entra em contacto Comigo!</h2>
-      </div>
-      <input type="hidden" name="access_key" value="317bd2c0-42f2-40a6-b153-b4c348b65fa0">
-      <input type="text" name="nome" placeholder="O teu nome" class="contact-inputs" required>
-      <input type="email" name="email" placeholder="O teu email" class="contact-inputs" required>
-      <textarea name="mensagem" placeholder="A tua mensagem" class="contact-inputs" required></textarea>
-      <button type="submit">Enviar</button>
-    </form>
-  </div>
-</section>
+        <div class="info-section">
+            <a href="Jamcepticeye.html" class="info-box">
+                <img src="image/Jamcepticeye.png" alt="Jamcepticeye">
+                <h3>Jamcepticeye</h3>
+                <p>Um Boss Rush Game em colaboração com a Fancy Crab Studios.</p>
+            </a>
 
+            <a href="3DJamcepticeye.html" class="info-box">
+                <img src="image/Jamcepticeye_12.png" alt="Sweaty Gamer Game">
+                <h3>Jamcepticeye Modelação 3D</h3>
+                <p>Um jogo arcade divertido com um toque de humor e intensidade.</p>
+            </a>
+
+            <a href="GameJam2025.html" class="info-box">
+                <img src="image/MadJam2025Ico.png" alt="Sanctuary">
+                <h3>Sanctuary</h3>
+                <p>Uma experiência imersiva que combina som, ambiente e emoção.</p>
+            </a>
+        </div>
+    </section>
+
+    <script src="js/script.js"></script>
 
     <!-- Footer -->
 <footer>
@@ -83,3 +106,5 @@
     </div>
 </footer>
 </body>
+
+</html>
