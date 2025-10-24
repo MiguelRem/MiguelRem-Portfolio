@@ -387,3 +387,53 @@ footer {
     border-radius: 2px;
 }
 
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+    color: #ddd;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.contact-info a {
+    color: #ff0000; /* vermelho padrão */
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+/* Cor ao passar o rato */
+.contact-info a:hover {
+    color: #ffffff; /* branco */
+    text-decoration: underline;
+}
+
+/* Garante que links visitados e clicados não mudam de cor */
+.contact-info a:visited,
+.contact-info a:active,
+.contact-info a:focus {
+    color: #ff0000; /* mantém vermelho */
+    text-decoration: none;
+}
+
+
+
+.contact-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Ajuste geral do layout do footer */
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    text-align: left;
+}
