@@ -41,18 +41,18 @@
         <!-- Sanctuary Section -->
         <section class="about-section">
             <div class="about-text">
-                <h2>Sanc<span>tuary</span></h2>
-                <p>Projeto Final da cadeira de programação 1 na ESMAD</p>
+                <h2>Death by a Thousand <span>Gears</span></h2>
+                <p>Projeto desenvolvido durante a Jamcepticeye onde estive encarregue pelo desenvolvimento de cenários e assets. Este é um projeto ainda em desenvolvimento em colaboração com a equipa da Fancy Crabs Studios.</p>
             </div>
 
             <!-- Carrossel -->
             <section class="carousel-section">
                 <div class="carousel-container">
                     <div class="carousel-slide">
-                        <img src="image/sanc1.png" alt="Slide 1">
-                        <img src="image/sanc2.png" alt="Slide 2">
-                        <img src="image/sanc3.png" alt="Slide 3">
-                        <img src="image/sanc4.png" alt="Slide 4">
+                        <img src="image/Jamcepticeye_4.png" alt="Slide 1">
+                        <img src="image/Jamcepticeye_5.png" alt="Slide 2">
+                        <img src="image/Jamcepticeye_6.png" alt="Slide 3">
+                        <img src="image/Jamcepticeye_7.png" alt="Slide 4">
                     </div>
                     <div class="carousel-dots">
                         <span class="dot" onclick="currentSlide(0, 0)"></span>
@@ -70,21 +70,23 @@
             <section class="carousel-section">
                 <div class="carousel-container">
                     <div class="carousel-slide">
-                        <img src="image/sanc1.png" alt="Concept 1">
-                        <img src="image/sanc1.png" alt="Concept 2">
-                        <img src="image/sanc1.png" alt="Concept 3">
+                        <img src="image/Jamcepticeye_8.png" alt="Concept 1">
+                        <img src="image/Jamcepticeye_9.png" alt="Concept 2">
+                        <img src="image/Jamcepticeye_10.png" alt="Concept 3">
+                        <img src="image/Jamcepticeye_12.png" alt="Concept 4">
                     </div>
                     <div class="carousel-dots">
                         <span class="dot" onclick="currentSlide(0, 1)"></span>
                         <span class="dot" onclick="currentSlide(1, 1)"></span>
                         <span class="dot" onclick="currentSlide(2, 1)"></span>
+                        <span class="dot" onclick="currentSlide(3, 1)"></span>
                     </div>
                 </div>
             </section>
 
             <div class="about-text right-align">
-                <h2>Con<span>cept</span></h2>
-                <p>Imagens de referência, ideias iniciais e processo criativo usado no desenvolvimento do modelo.</p>
+                <h2>Topo<span>logia</span></h2>
+                <p></p>
             </div>
         </section>
 
@@ -92,21 +94,17 @@
         <section class="about-section uv-section">
             <div class="about-text left-align">
                 <h2>U<span>V</span></h2>
-                <p>Mapeamento UV utilizado para texturização do modelo 3D.</p>
+                <p>Para simplicidade, utilizei neste projeto a paleta da "Imphenzia-PixPal" para colorir os materiais através de UVs e dar-lhes animações de cor.</p>
             </div>
 
             <!-- Carrossel -->
             <section class="carousel-section">
                 <div class="carousel-container">
                     <div class="carousel-slide">
-                        <img src="image/sanc1.png" alt="UV 1">
-                        <img src="image/sanc1.png" alt="UV 2">
-                        <img src="image/sanc1.png" alt="UV 3">
+                        <img src="image/Jamcepticeye_11.png" alt="UV 1">
                     </div>
                     <div class="carousel-dots">
                         <span class="dot" onclick="currentSlide(0, 2)"></span>
-                        <span class="dot" onclick="currentSlide(1, 2)"></span>
-                        <span class="dot" onclick="currentSlide(2, 2)"></span>
                     </div>
                 </div>
             </section>
@@ -115,31 +113,34 @@
 
 
     <script src="js/script.js"></script>
-    <script>
-        document.querySelectorAll('.carousel-slide img').forEach(img => {
-            img.addEventListener('click', (e) => {
-                e.preventDefault(); // impede o link de abrir
+<script>
+    document.querySelectorAll('.carousel-container').forEach(container => {
+        const imgs = container.querySelectorAll('.carousel-slide img');
+        imgs.forEach(img => {
+            img.addEventListener('click', e => {
+                e.preventDefault();
                 openImageModal(img.src);
             });
         });
+    });
 
-        function openImageModal(src) {
-            const modal = document.createElement('div');
-            modal.classList.add('image-modal');
-            modal.innerHTML = `<img src="${src}" alt="expanded">`;
+    function openImageModal(src) {
+        const modal = document.createElement('div');
+        modal.classList.add('image-modal');
+        modal.innerHTML = `<img src="${src}" alt="expanded">`;
 
-            document.body.appendChild(modal);
+        document.body.appendChild(modal);
 
-            // ativa o fade-in
-            setTimeout(() => modal.classList.add('active'), 10);
+        // fade-in
+        setTimeout(() => modal.classList.add('active'), 10);
 
-            // fecha ao clicar fora da imagem ou na própria imagem
-            modal.addEventListener('click', () => {
-                modal.classList.remove('active');
-                setTimeout(() => modal.remove(), 300);
-            });
-        }
-    </script>
+        // fechar ao clicar
+        modal.addEventListener('click', () => {
+            modal.classList.remove('active');
+            setTimeout(() => modal.remove(), 300);
+        });
+    }
+</script>
 
 
     <!-- Footer -->
