@@ -11,44 +11,48 @@
 </head>
 
 <body>
-<section class="carousel-section">
-    <div class="carousel-container">
-        <div class="carousel-slide">
-            <a href="Jamcepticeye.html"><img src="image/Jamcepticeye_2.png" alt="Slide 1"></a>
-            <a href="3DJamcepticeye.html"><img src="image/Jamcepticeye_11.png" alt="Slide 2"></a>
-            <a href="Sanctuary.html"><img src="image/sanc3.png" alt="Slide 3"></a>
+    <section class="carousel-section">
+        <div class="carousel-container">
+            <div class="carousel-slide">
+                <a href="Jamcepticeye.html"><img src="image/Jamcepticeye_2.png" alt="Slide 1"></a>
+                <a href="3DJamcepticeye.html"><img src="image/Jamcepticeye_11.png" alt="Slide 2"></a>
+                <a href="Sanctuary.html"><img src="image/sanc3.png" alt="Slide 3"></a>
+            </div>
+            <div class="carousel-dots">
+                <span class="dot" onclick="currentSlide(0)"></span>
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+            </div>
         </div>
-        <div class="carousel-dots">
-            <span class="dot" onclick="currentSlide(0)"></span>
-            <span class="dot" onclick="currentSlide(1)"></span>
-            <span class="dot" onclick="currentSlide(2)"></span>
+    </section>
+
+
+<!-- Navbar -->
+<nav class="navbar">
+    <div class="nav-container">
+        <div class="nav-left">
+            <a href="about.html">Sobre Mim</a>
+            <a href="games.html">Jogos</a>
+        </div>
+
+        <div class="logo">
+            <a href="index.html">
+                <img src="image/icon.png" alt="Logo">
+            </a>
+        </div>
+
+        <div class="nav-right">
+            <a href="modelacao.html">3D</a>
+            <a href="contact.html">Contacto</a>
+            <a href="en/Enindex.html" class="language-switch">
+                <img src="image/enflag.png" alt="Switch to English" class="flag-icon">
+            </a>
         </div>
     </div>
-</section>
+</nav>
 
 
-    <!-- Navbar -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="nav-left">
-                <a href="about.html">Sobre Mim</a>
-                <a href="games.html">Jogos</a>
-            </div>
-
-            <div class="logo">
-                <a href="index.html">
-                    <img src="image/icon.png" alt="Logo">
-                </a>
-            </div>
-
-            <div class="nav-right">
-                <a href="modelacao.html">3D</a>
-                <a href="contact.html">Contacto</a>
-            </div>
-        </div>
-    </nav>
-
-    <!-- altera isto -->
+<!-- Featured section -->
     <section class="featured-section">
         <h2 class="featured-header">Destaques</h2>
 
@@ -76,35 +80,37 @@
     <script src="js/script.js"></script>
 
     <!-- Footer -->
-<footer>
-    <div class="footer-content">
-        <!-- Logo -->
-        <div class="logo">
-            <img src="image/icon.png" alt="Logo" />
-        </div>
+    <footer>
+        <div class="footer-content">
+            <!-- Logo -->
+            <div class="logo">
+                <img src="image/icon.png" alt="Logo" />
+            </div>
 
-        <!-- Redes sociais -->
-        <div class="social-media">
-            <p class="social-text">Fica a par das minhas redes sociais!</p>
-            <div class="social-icons-wrapper">
-                <a href="https://www.instagram.com/michaelson.nef/" class="social-icon" target="_blank" rel="noopener noreferrer">
-                    <i class="fab fa-instagram"></i>
-                </a>
-                <a href="https://www.linkedin.com/in/miguel-teixeira-1a1810223" class="social-icon" target="_blank" rel="noopener noreferrer">
-                    <i class="fab fa-linkedin"></i>
-                </a>
+            <!-- Redes sociais -->
+            <div class="social-media">
+                <p class="social-text">Fica a par das minhas redes sociais!</p>
+                <div class="social-icons-wrapper">
+                    <a href="https://www.instagram.com/michaelson.nef/" class="social-icon" target="_blank"
+                        rel="noopener noreferrer">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/miguel-teixeira-1a1810223" class="social-icon" target="_blank"
+                        rel="noopener noreferrer">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Contactos -->
+            <div class="contact-info">
+                <p class="contact-title">Contactos</p>
+                <p>Email: <a href="mailto:miguelteixeiracontact@gmail.com">miguelteixeiracontact@gmail.com</a></p>
+                <p>Telefone: <a href="tel:+351939626121">+351 939 626 121</a></p>
+                <p>Localização: Porto, Portugal</p>
             </div>
         </div>
-
-        <!-- Contactos -->
-        <div class="contact-info">
-            <p class="contact-title">Contactos</p>
-            <p>Email: <a href="mailto:miguelteixeiracontact@gmail.com">miguelteixeiracontact@gmail.com</a></p>
-            <p>Telefone: <a href="tel:+351939626121">+351 939 626 121</a></p>
-            <p>Localização: Porto, Portugal</p>
-        </div>
-    </div>
-</footer>
+    </footer>
 </body>
 
 </html>

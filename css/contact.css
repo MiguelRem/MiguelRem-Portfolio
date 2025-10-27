@@ -20,9 +20,9 @@ main {
     flex: 1; /* Ocupa o espaço entre navbar e footer */
 }
 
-/* =======================
+/* ------------------------------------------------------
    NAVBAR
-======================= */
+------------------------------------------------------ */
 .navbar {
     position: absolute;
     top: 0;
@@ -42,25 +42,30 @@ main {
     width: 70%;
 }
 
-.nav-left, .nav-right {
+.nav-left,
+.nav-right {
     display: flex;
     gap: 30px;
 }
 
-.nav-left a, .nav-right a {
+.nav-left a,
+.nav-right a {
     color: #ddd;
     text-decoration: none;
     margin: 0 20px;
     font-size: 18px;
     position: relative;
+    transition: color 0.3s ease;
 }
 
-.nav-left a:hover, .nav-right a:hover {
+.nav-left a:hover,
+.nav-right a:hover {
     color: #fff;
 }
 
 /* Hover underline effect */
-.nav-left a::before, .nav-right a::before {
+.nav-left a::before,
+.nav-right a::before {
     content: '';
     position: absolute;
     bottom: -5px;
@@ -71,19 +76,30 @@ main {
     transition: width 0.3s;
 }
 
-.nav-left a:hover::before, .nav-right a:hover::before {
+.nav-left a:hover::before,
+.nav-right a:hover::before {
     width: 100%;
 }
 
-/* =======================
-   LOGO
-======================= */
-.logo img {
-    max-width: 150px;
-    height: auto;
-    margin-right: 20px;
-    margin-bottom: 10px;
+.language-switch {
+    display: flex;
+    align-items: center;
 }
+
+.flag-icon {
+    width: 30px;
+    height: 30px;
+    border: 1px solid #fff;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.flag-icon:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 8px rgba(255, 0, 0, 0.6);
+}
+
 
 /* ------------------------------------------------------
    FOOTER
